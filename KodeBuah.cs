@@ -8,43 +8,44 @@ namespace modul4_1302220105
 {
     internal class KodeBuah
     {
-        private string[,] kodebuahArray = new string[,]
+        public String namabuah;
+        public String kodebuah;
+        public List<KodeBuah> listKodeBuah = new List<KodeBuah>();
+        public KodeBuah(String a = "", String k = "")
         {
-            { "Apel", "A00" },
-            { "Aprikot", "B00" },
-            { "Alpukat", "C00" },
-            { "Pisang", "D00" },
-            { "Paprika", "E00" },
-            { "Blackberry", "F00" },
-            { "Ceri", "H00" },
-            { "Kelapa", "I00" },
-            { "Jagung", "J00" },
-            { "Kurma", "K00" },
-            { "Durian", "L00" },
-            { "Anggur", "M00" },
-            { "Melon", "N00" },
-            { "Semangka", "O00" }
-        };
-
-        public string GetKodeBuah(string buah)
-        {
-            for (int i = 0; i < kodebuahArray.GetLength(0); i++)
-            {
-                if (kodebuahArray[i, 0].ToLower() == buah.ToLower())
-                {
-                    return kodebuahArray[i, 1];
-                }
-            }
-            return "Kodebuah tidak ditemukan.";
+            this.namabuah = a;
+            this.kodebuah = k;
         }
 
-        public string GetKodeBuah2()
+        public void setKodeBuah()
         {
-            for (int i = 0; i < kodebuahArray.GetLength(0); i++)
-            {
-                Console.WriteLine(kodebuahArray[i, 1]);
-            }
-            return "Kodebuah tidak ditemukan.";
+            this.listKodeBuah.Add(new KodeBuah("Apel", "A00"));
+            this.listKodeBuah.Add(new KodeBuah("Aprikot", "B00"));
+            this.listKodeBuah.Add(new KodeBuah("Alpukat", "C00"));
+            this.listKodeBuah.Add(new KodeBuah("Pisang", "D00"));
+            this.listKodeBuah.Add(new KodeBuah("Paprika", "E00"));
+            this.listKodeBuah.Add(new KodeBuah("Blackberry", "F00"));
+            this.listKodeBuah.Add(new KodeBuah("Ceri", "H00"));
+            this.listKodeBuah.Add(new KodeBuah("Kelapa", "I00"));
+            this.listKodeBuah.Add(new KodeBuah("Jagung", "J00"));
+            this.listKodeBuah.Add(new KodeBuah("Kurma", "K00"));
+            this.listKodeBuah.Add(new KodeBuah("Durian", "L00"));
+            this.listKodeBuah.Add(new KodeBuah("Anggur", "M00"));
+            this.listKodeBuah.Add(new KodeBuah("Melon", "N00"));
+            this.listKodeBuah.Add(new KodeBuah("Semangka", "O00"));
         }
+
+        public void getKodeBuah()
+        {
+            Console.WriteLine("Buah\tKode Buah");
+            foreach (KodeBuah k in this.listKodeBuah)
+            {
+                string kelPad = k.namabuah.PadRight(15);
+                Console.Write(kelPad + "\t" + k.kodebuah);
+                Console.WriteLine();
+            }
+
+        }
+
     }
 }
