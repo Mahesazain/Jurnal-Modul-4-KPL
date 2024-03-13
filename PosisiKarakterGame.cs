@@ -8,6 +8,10 @@ namespace modul4_1302220105
 {
     internal class PosisiKarakterGame
     {
-
+        public enum posisi
+        {
+            Jongkok,Berdiri,Tengkurap,Terbang
+        }
+        private posisi currentState;
     }
 }
