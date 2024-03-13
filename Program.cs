@@ -4,12 +4,12 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Contoh pertama :");
+            Console.WriteLine("KodeBuah :");
             KodeBuah kodebuah = new KodeBuah();
             kodebuah.setKodeBuah();
             kodebuah.getKodeBuah();
 
-            Console.WriteLine("\nContoh kedua :");
+            Console.WriteLine("\nKodeBuah1 :");
             KodeBuah1 kodepos1 = new KodeBuah1();
             kodepos1.getKodeBuah();
 
