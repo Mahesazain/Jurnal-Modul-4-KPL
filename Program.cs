@@ -8,6 +8,11 @@
             KodeBuah kodebuah = new KodeBuah();
             kodebuah.setKodeBuah();
             kodebuah.getKodeBuah();
+
+            Console.WriteLine("\nContoh kedua :");
+            KodeBuah1 kodepos1 = new KodeBuah1();
+            kodepos1.getKodeBuah();
+
         }
-    }
+    } 
 }

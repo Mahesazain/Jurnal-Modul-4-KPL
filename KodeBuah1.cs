@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -9,19 +8,18 @@ namespace modul4_1302220105
 {
     internal class KodeBuah1
     {
-        public String NamaBuah;
-        public String KodeBuah;
-        public List<KodeBuah> listKodeBuah = new List<KodeBuah>();
+        public enum NamaBuah { Apel, Aprikot, Alpukat, Pisang, Paprika, Blackberry, Ceri, Kelapa, Jagung, Kurma, Durian, Anggur, Melon, Semangka };
+        public enum KodeBuah { A00, B00, C00, D00, E00, F00, H00, I00, J00, K00, L00, M00 , N00, O00 }
 
-        PublicKey KodeBuah2(String a = " " String k = 0)
+        public void getKodeBuah()
         {
-            this.NamaBuah = a;
-            this.KodeBuah = k;
-        }
-
-        public void setKodeBuah()
-        {
-            this.listKodeBuah.Add(new KodeBuah2("Apel","A00"));
+            Console.WriteLine("Nama Buah\tKode Buah");
+            for (int i = 0; i < 11; i++)
+            {
+                string kelPad = ((NamaBuah)i).ToString().PadRight(15);
+                Console.Write(kelPad + "\t" + ((KodeBuah)i).ToString());
+                Console.WriteLine();
+            }
         }
     }
 }
